@@ -4,7 +4,7 @@ pipeline {
         stage('Build') {
             steps {
                 bat 'echo ABC'
-                timeout(time: '1', unit: 'MINUTES') {
+                timeout(time: 1, unit: 'MINUTES') {
                     echo(message: 'やくざ')
                 }
             }
