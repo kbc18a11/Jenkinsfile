@@ -6,5 +6,8 @@ pipeline {
                 bat 'echo ABC'
             }
         }
+        timeout(time: "1", unit: 'MINUTES'){
+            echo(message: 'やくざ')
+        }
     }
 }
