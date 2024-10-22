@@ -9,5 +9,10 @@ pipeline {
                 sh 'mvn package -f my-app'
             }
         }
+        post {
+            always {
+                recordIssues tools: [spotBugs()]
+            }
+        }
     }
 }
