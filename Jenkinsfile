@@ -6,6 +6,7 @@ pipeline {
         stage('build') {
             steps {
                 dir('./my-app') {
+                    sh 'cat pom.xml'
                     sh 'mvn install'
                     sh 'mvn package'
                 }
