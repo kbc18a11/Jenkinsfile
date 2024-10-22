@@ -5,6 +5,7 @@ pipeline {
     stages {
         stage('build') {
             steps {
+                sh 'ls'
                 sh 'mvn install -f my-app'
                 sh 'mvn package -f my-app'
             }
